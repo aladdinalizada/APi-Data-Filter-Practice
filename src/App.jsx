@@ -19,6 +19,10 @@ function App() {
           return item.name.toLowerCase().includes(e.target.value.toLowerCase());
         });
         setdata(search);
+        if (search === []) {
+          alert("No country found");
+        }
+        console.log(search);
       });
   };
   const handleSortbyNameAsc = () => {
@@ -37,7 +41,7 @@ function App() {
     <div className="App">
       <div className="body">
         <h1>Country List</h1>
-        <p>* Showing 99 countries</p>
+        <p>* Showing 250 countries</p>
         <br />
         <input
           type="search"
